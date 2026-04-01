@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Fit-Stoves - Premium Stoves Booking</title>
+    <meta name="description" content="Book your premium stove from Earth Fit-Stoves branches worldwide.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">🔥 Earth Fit-Stoves</div>
+            <ul class="nav-links">
+                <li id="nav-home" class="active"><a href="#">Home</a></li>
+                <li id="nav-branches"><a href="#">Branches</a></li>
+                <li id="nav-contact"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-panel">
+                    <div class="search-item" style="border-right: none;">
+                        <label>State</label>
+                        <select id="state-select" aria-label="Select State">
+                            <option value="all">All States</option>
+                            <option value="TN">Tamil Nadu</option>
+                            <option value="KL">Kerala</option>
+                        </select>
+                    </div>
+                    <button class="search-btn" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <div class="content-body">
+                <div class="results-section">
+                    <div class="results-header">
+                        <h1>Found <span id="results-count">4</span> <span id="results-type">options</span> for you</h1>
+                        <div class="sort-filter" id="sort-price-btn" style="user-select: none; cursor: pointer;">
+                            <span>Sort by price &uarr;&darr;</span>
+                        </div>
+                    </div>
+
+                    <div class="filters" style="align-items: center; flex-wrap: wrap;">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0;">Price Range:</span>
+                        <input type="number" id="min-price" class="form-input" style="width: 110px; padding: 0.4rem 0.8rem; margin-bottom: 0; border-radius: 20px; font-weight: 600;" placeholder="Min ₹">
+                        <span style="color: var(--text-muted); font-weight: 600;">-</span>
+                        <input type="number" id="max-price" class="form-input" style="width: 110px; padding: 0.4rem 0.8rem; margin-bottom: 0; border-radius: 20px; font-weight: 600;" placeholder="Max ₹">
+                        <button id="apply-price-btn" class="filter-btn" style="margin-left: 0.5rem; border-color: var(--text-main); background: var(--text-main); color: #fff;">Apply</button>
+                        <button id="clear-price-btn" class="filter-btn" style="border: none; background: transparent; color: var(--text-muted);">Clear</button>
+                    </div>
+
+                    <div class="cards-list" id="stove-list">
+                        <!-- Cards injected by JS -->
+                    </div>
+                </div>
+                
+                <!-- Contact Section -->
+                <div class="contact-section" id="contact-section" style="display: none;">
+                    <div class="contact-info">
+                        <h2>CONTACT US</h2>
+                        <div class="accent-line"></div>
+                        
+                        <div class="contact-item">
+                            <h4>🏢 Head Office</h4>
+                            <p>📍 Chennai, Tamil Nadu, 600001</p>
+                            <p>✉️ headoffice@earthfit-stoves.com</p>
+                            <p>📞 +91 80000 00000</p>
+                            <p>🕒 Mon - Fri: 9:00 AM - 5:00 PM</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4>🔥 Branches Contact</h4>
+                            <p><strong>Erode:</strong> erode@earthfit-stoves.com | +91 99999 11111</p>
+                            <p><strong>Kochi:</strong> kochi@earthfit-stoves.com | +91 99999 22222</p>
+                            <p><strong>Chennai:</strong> chennai@earthfit-stoves.com | +91 99999 33333</p>
+                            <p><strong>Coimbatore:</strong> cbe@earthfit-stoves.com | +91 99999 44444</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <p>🌐 www.earthfit-stoves.com</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Footer -->
+            <footer class="site-footer">
+            <div class="footer-left">
+                &copy; 2026 Earth Fit-Stoves
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+            </div>
+            <div class="footer-right">
+                <a href="#">Privacy policy</a> &bull; <a href="#">Refund policy</a>
+            </div>
+        </footer>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="booking-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal">&times;</button>
+            <h2 id="modal-title">Book Order</h2>
+            <p>Branch: <strong id="modal-branch"></strong></p>
+            <p>Please contact the branch to confirm your order.</p>
+            <p class="phone-number" id="modal-phone"></p>
+            <a href="#" id="modal-call-btn" class="primary-btn" style="display: block; text-align: center; text-decoration: none; box-sizing: border-box;">Call Now</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
